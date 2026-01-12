@@ -61,3 +61,28 @@ punctuation_free_tokens = [
 
 print("PUNCTUATION-FREE TOKENS:\n", punctuation_free_tokens)
 print("-" * 60)
+
+# ====================
+# Stemming
+# ====================
+stemmer = PorterStemmer()
+stemmed_tokens = [
+    stemmer.stem(token)
+    for token in punctuation_free_tokens
+]
+
+print("STEMMED TOKENS:\n", stemmed_tokens)
+print("-" * 60)
+
+
+# ====================
+# Lemmatization
+# ====================
+lemmatizer = WordNetLemmatizer()
+lemmatized_tokens = [
+    lemmatizer.lemmatize(token)
+    for token in punctuation_free_tokens
+]
+
+print("LEMMATIZED TOKENS:\n", lemmatized_tokens)
+print("-" * 60)
